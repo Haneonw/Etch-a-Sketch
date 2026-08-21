@@ -1,14 +1,17 @@
-function putSquares(size)
+function putSquares(numberPerSide)
 {
-    // removes the old squares.
+    // Removes the old squares.
     game.innerHTML = "";
-
-    for (let i = 0; i < (grid / size) ** 2; i++) {
+    size = grid/numberPerSide;
+    for (let i = 0; i < (grid / size)**2; i++) {
         // Create a new square element.
         let square = document.createElement("div");
 
         // Add the "square" class to apply its CSS styles.
         square.classList.add("square");
+
+        // Hover Effect
+        square.addEventListener("mouseover", hoverEffect);
 
         // Set the square's width and height based on the given size.
         square.style.width = `${size}px`;
@@ -20,8 +23,12 @@ function putSquares(size)
 
 }
 
+function hoverEffect(event){
+    event.target.style.background = "pink";
+}
+
 const game = document.querySelector("#game");
 //Grid Area.
 const grid = 800;
 //Put squares on grid.
-putSquares(80);
+putSquares(4);
