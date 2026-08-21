@@ -1,5 +1,9 @@
-function putSquares(numberPerSide)
+function putSquares(event)
 {
+    event.preventDefault();
+    let numberPerSide = input.value;
+    input.value = "";
+    if(numberPerSide > 100 || numberPerSide < 1){return;}
     // Removes the old squares.
     game.innerHTML = "";
     size = grid/numberPerSide;
@@ -24,11 +28,20 @@ function putSquares(numberPerSide)
 }
 
 function hoverEffect(event){
-    event.target.style.background = "pink";
+    event.target.style.backgroundColor = select.value;
 }
 
 const game = document.querySelector("#game");
 //Grid Area.
 const grid = 800;
 //Put squares on grid.
-putSquares(4);
+
+
+let apply = document.querySelector("button");
+let input = document.querySelector("input");
+input.value = 50;
+let select = document.querySelector("select");
+apply.addEventListener("click", putSquares);
+apply.dispatchEvent(new Event('click'));
+
+

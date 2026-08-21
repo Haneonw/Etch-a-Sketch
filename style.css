@@ -1,35 +1,81 @@
 
+*{
+    box-sizing: border-box;
+     font-family: "Kranky", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(226, 117, 117);
+    background-color: rgb(107, 169, 177);
 }
 
-.content{
+#sections{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#content{
     display: flex;
     flex-direction: column;
     height: 100vh;
+    align-items: center;
 }
 
-#title{
-    text-align: center;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
+
 
 #game{
-    box-sizing: content-box;
-    border: solid;
-    border-width: 0.55mm;
+    border-width: 0.050cm;
     width: 800px;
     height: 800px;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    justify-self: center;
 }
 
+
 .square{
-    box-sizing: border-box;
     border: solid;
     border-width: 1px;
+}
+form {
+  border-radius: 5px;
+  background-color: #fcf8f969;
+  padding: 20px;
+}
+
+label {display: block;}
+
+input[type=text], select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  background-color: #65ca68fd;
+  color: white;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #6aac6dc4;
+}
+
+.section{
+    display: flex;
+    flex : 1;
+    justify-content: space-evenly;
 }

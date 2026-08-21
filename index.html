@@ -6,12 +6,35 @@
     <title>Etch-a-Sketch</title>
     <link rel = "stylesheet" href = "style.css">
     <script src="javascript.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kranky&display=swap" rel="stylesheet">
 </head>
 <body>
-<div id = "content">
-    <h1 id = "title">Etch-a-Sketch</h1>
-    <div id = "game">
+<div id = "sections">
+    <div class = "section">
+        <form>
+            <label>Squares per side:</label>
+            <input type="text" placeholder="1 to 100...">
+        <label>Color</label>
+        <select>
+            <option value="aquamarine">Aquamarine</option>
+            <option value="yellow">Yellow</option>
+            <option value="pink">Pink</option>
+            <option value="purple">Purple</option>
+            <option value="gray">Gray</option>
+            <option value="black">Black</option>
+        </select>
+            <button>Apply</button>
+        </form>
+    </div>
+    <div class = "section" id = "content">
+        <h1 id = "title">Etch-a-Sketch</h1>
+        <div id = "game">
 
+        </div>
+    </div>
+    <div class = "section">
     </div>
 </div>
 </body>
