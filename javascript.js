@@ -3,6 +3,7 @@ function putSquares(event)
     event.preventDefault();
     let numberPerSide = input.value;
     input.value = "";
+    color = select.value;
     if(numberPerSide > 100 || numberPerSide < 1){return;}
     // Removes the old squares.
     game.innerHTML = "";
@@ -28,7 +29,7 @@ function putSquares(event)
 }
 
 function hoverEffect(event){
-    event.target.style.backgroundColor = select.value;
+    event.target.style.backgroundColor = color;
 }
 
 const game = document.querySelector("#game");
@@ -40,6 +41,7 @@ const grid = 800;
 let apply = document.querySelector("button");
 let input = document.querySelector("input");
 input.value = 50;
+let color = "aquamarine";
 let select = document.querySelector("select");
 apply.addEventListener("click", putSquares);
 apply.dispatchEvent(new Event('click'));
